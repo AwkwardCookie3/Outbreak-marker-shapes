@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="">
+  <script type="text/ecmascript">
+    <![CDATA[
+      function getColor() {
+        var query = window.location.search.substring(1);
+        var vars = query.split('&');
+        for (var i = 0; i < vars.length; i++) {
+          var pair = vars[i].split('=');
+          if (pair[0] == 'color') {
+            return decodeURIComponent(pair[1]);
+          }
+        }
+        return "#000000";
+      }
+
+      document.documentElement.style.fill = getColor();
+    ]]>
+  </script>
+<path d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"/>
+</svg>
